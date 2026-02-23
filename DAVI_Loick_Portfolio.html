@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmos | Accueil & Projets</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@500;700;800&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@500;700;800&display=swap"
+            rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -130,6 +130,32 @@
             backdrop-filter: blur(7px);
             height: 70px;
             border-bottom: 1px solid var(--glass-border);
+            overflow: hidden; /* Empêche le halo de déborder de la navbar */
+        }
+
+        /* AJOUT : Le halo de souris (Spotlight effect) */
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Le gradient suit les variables CSS définies par le JS */
+            background: radial-gradient(
+                    200px circle at var(--mouse-x) var(--mouse-y),
+                    rgba(59, 130, 246, 0.25), /* Couleur et opacité du halo au centre */
+                    transparent 100%
+            );
+            opacity: 0; /* Caché par défaut */
+            transition: opacity 0.3s ease;
+            pointer-events: none; /* Laisse passer les clics vers les liens */
+            z-index: 0;
+        }
+
+        /* Apparition du halo uniquement au survol de la navbar */
+        nav:hover::before {
+            opacity: 1;
         }
 
         .logo {
@@ -138,7 +164,7 @@
             letter-spacing: 2px;
             color: white;
             position: relative;
-            z-index: 2;
+            z-index: 2; /* Garde le texte au-dessus du halo */
         }
 
         nav ul {
@@ -149,7 +175,7 @@
             background: rgba(255, 255, 255, 0.03);
             padding: 5px;
             border-radius: 50px;
-            z-index: 2;
+            z-index: 2; /* Garde les liens au-dessus du halo */
         }
 
         nav a {
@@ -437,150 +463,165 @@
 
 <body>
 
-    <div class="stars-container">
-        <div id="stars" class="stars"></div>
-        <div id="stars2" class="stars2"></div>
-        <div id="stars3" class="stars3"></div>
-    </div>
+<div class="stars-container">
+    <div id="stars" class="stars"></div>
+    <div id="stars2" class="stars2"></div>
+    <div id="stars3" class="stars3"></div>
+</div>
 
-    <nav>
-        <div class="logo">COSMOS</div>
-        <ul class="nav-links">
-            <div class="nav-marker"></div>
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#projects">Mes Projets</a></li>
-            <li><a href="about.html">Mon Profil</a></li>
-        </ul>
-    </nav>
+<nav id="main-nav">
+    <div class="logo">COSMOS</div>
+    <ul class="nav-links">
+        <div class="nav-marker"></div>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#projects">Mes Projets</a></li>
+        <li><a href="about.html">Mon Profil</a></li>
+    </ul>
+</nav>
 
-    <section class="hero" id="home">
-        <h1>DAVI Loïck</h1>
-        <p class="subtitle">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates dolor itaque ipsa labore, ipsam facilis
-            deserunt corrupti aliquam tempora similique!
-        </p>
-        <a href="#projects" class="btn-primary">Voir mes projets</a>
+<section class="hero" id="home">
+    <h1>DAVI Loïck</h1>
+    <p class="subtitle">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates dolor itaque ipsa labore, ipsam facilis
+        deserunt corrupti aliquam tempora similique!
+    </p>
+    <a href="#projects" class="btn-primary">Voir mes projets</a>
+</section>
+
+<main class="glass-zone">
+    <section class="section-container" id="projects">
+        <div class="section-header">
+            <h2>Mes Projets</h2>
+            <p>Une sélection de mes travaux académiques et personnels.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-visual">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, eaque.
+                        l'IA.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">POO</span>
+                        <span class="tag">Swing</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-project btn-code"><i class="devicon-github-original"></i> Code</a>
+                        <a href="#" class="btn-project btn-demo"><i class="fa-solid fa-eye"></i> Voir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-visual">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <div class="project-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Tailwind</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-project btn-code"><i class="devicon-github-original"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-visual">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, sapiente..</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Async</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-project btn-code"><i class="devicon-github-original"></i> Code</a>
+                        <a href="#" class="btn-project btn-demo"><i class="fa-solid fa-link"></i> Inviter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+</main>
 
-    <main class="glass-zone">
-        <section class="section-container" id="projects">
-            <div class="section-header">
-                <h2>Mes Projets</h2>
-                <p>Une sélection de mes travaux académiques et personnels.</p>
-            </div>
+<script>
+    /* JS pour les étoiles et le scroll */
+    function createStars(selector, count) {
+        let boxShadow = "";
+        for (let i = 0; i < count; i++) {
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * 2000);
+            boxBoxShadow += `${x}px ${y}px #FFF, `;
+        }
+        boxShadow = boxShadow.slice(0, -2);
+        document.querySelector(selector).style.setProperty('--space-layer', boxShadow);
+    }
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-visual">
-                        <i class="fa-solid fa-gamepad"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Lorem, ipsum.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, eaque.
-                            l'IA.</p>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">POO</span>
-                            <span class="tag">Swing</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-project btn-code"><i class="devicon-github-original"></i> Code</a>
-                            <a href="#" class="btn-project btn-demo"><i class="fa-solid fa-eye"></i> Voir</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-visual">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem ipsum dolor sit.</p>
-                        <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Tailwind</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-project btn-code"><i class="devicon-github-original"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-visual">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, sapiente..</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">API</span>
-                            <span class="tag">Async</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-project btn-code"><i class="devicon-github-original"></i> Code</a>
-                            <a href="#" class="btn-project btn-demo"><i class="fa-solid fa-link"></i> Inviter</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        /* JS pour les étoiles et le scroll */
-        function createStars(selector, count) {
-            let boxShadow = "";
-            for (let i = 0; i < count; i++) {
-                let x = Math.floor(Math.random() * window.innerWidth);
-                let y = Math.floor(Math.random() * 2000);
-                boxBoxShadow += `${x}px ${y}px #FFF, `;
+    // Correction rapide de la boucle de string
+    function initStars() {
+        let sets = [['.stars', 700], ['.stars2', 200], ['.stars3', 100]];
+        sets.forEach(([sel, cnt]) => {
+            let shadow = [];
+            for (let i = 0; i < cnt; i++) {
+                shadow.push(`${Math.floor(Math.random() * window.innerWidth)}px ${Math.floor(Math.random() * 2000)}px #FFF`);
             }
-            boxShadow = boxShadow.slice(0, -2);
-            document.querySelector(selector).style.setProperty('--space-layer', boxShadow);
-        }
-
-        // Correction rapide de la boucle de string
-        function initStars() {
-            let sets = [['.stars', 700], ['.stars2', 200], ['.stars3', 100]];
-            sets.forEach(([sel, cnt]) => {
-                let shadow = [];
-                for (let i = 0; i < cnt; i++) {
-                    shadow.push(`${Math.floor(Math.random() * window.innerWidth)}px ${Math.floor(Math.random() * 2000)}px #FFF`);
-                }
-                document.querySelector(sel).style.setProperty('--space-layer', shadow.join(', '));
-            });
-        }
-        initStars();
-        window.addEventListener('resize', initStars);
-
-        const navLinks = document.querySelectorAll('.nav-links a');
-        const marker = document.querySelector('.nav-marker');
-
-        function moveMarker(e) {
-            const link = e.target;
-            marker.style.opacity = '1';
-            marker.style.left = link.offsetLeft + 'px';
-            marker.style.width = link.offsetWidth + 'px';
-        }
-        function hideMarker() { marker.style.opacity = '0'; }
-        navLinks.forEach(link => link.addEventListener('mouseenter', moveMarker));
-        document.querySelector('.nav-links').addEventListener('mouseleave', hideMarker);
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const top = target.getBoundingClientRect().top + window.pageYOffset - 70;
-                    window.scrollTo({ top: top, behavior: 'smooth' });
-                }
-            });
+            document.querySelector(sel).style.setProperty('--space-layer', shadow.join(', '));
         });
-    </script>
+    }
+    initStars();
+    window.addEventListener('resize', initStars);
+
+    /* --- SCRIPT HOVER NAV (Le pill marqueur) --- */
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const marker = document.querySelector('.nav-marker');
+
+    function moveMarker(e) {
+        const link = e.target;
+        marker.style.opacity = '1';
+        marker.style.left = link.offsetLeft + 'px';
+        marker.style.width = link.offsetWidth + 'px';
+    }
+    function hideMarker() { marker.style.opacity = '0'; }
+    navLinks.forEach(link => link.addEventListener('mouseenter', moveMarker));
+    document.querySelector('.nav-links').addEventListener('mouseleave', hideMarker);
+
+    /* --- NOUVEAU SCRIPT : SPOTLIGHT MOUSE TRACKING --- */
+    const navBar = document.getElementById('main-nav');
+    navBar.addEventListener('mousemove', (e) => {
+        // Récupère les coordonnées de la souris relatives à la navbar
+        const rect = navBar.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Met à jour les variables CSS lues par le background radial-gradient
+        navBar.style.setProperty('--mouse-x', `${x}px`);
+        navBar.style.setProperty('--mouse-y', `${y}px`);
+    });
+
+    /* --- SCRIPT SMOOTH SCROLL --- */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const top = target.getBoundingClientRect().top + window.pageYOffset - 70;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

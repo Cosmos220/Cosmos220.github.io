@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmos | Compétences & CV</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@500;700;800&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@500;700;800&display=swap"
+            rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -130,6 +130,30 @@
             backdrop-filter: blur(7px);
             height: 70px;
             border-bottom: 1px solid var(--glass-border);
+            overflow: hidden; /* Empêche le halo de déborder de la navbar */
+        }
+
+        /* AJOUT : Le halo de souris (Spotlight effect) */
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                    200px circle at var(--mouse-x) var(--mouse-y),
+                    rgba(59, 130, 246, 0.25),
+                    transparent 100%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        nav:hover::before {
+            opacity: 1;
         }
 
         .logo {
@@ -696,247 +720,208 @@
 
 <body>
 
-    <div class="stars-container">
-        <div id="stars" class="stars"></div>
-        <div id="stars2" class="stars2"></div>
-        <div id="stars3" class="stars3"></div>
-    </div>
+<div class="stars-container">
+    <div id="stars" class="stars"></div>
+    <div id="stars2" class="stars2"></div>
+    <div id="stars3" class="stars3"></div>
+</div>
 
-    <nav>
-        <div class="logo">COSMOS</div>
-        <ul class="nav-links">
-            <div class="nav-marker"></div>
-            <li><a href="DAVI_Loick_Portfolio.html">Accueil / Projets</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#parcour">Parcours</a></li>
-        </ul>
-    </nav>
+<nav id="main-nav">
+    <div class="logo">COSMOS</div>
+    <ul class="nav-links">
+        <div class="nav-marker"></div>
+        <li><a href="DAVI_Loick_Portfolio.html">Accueil / Projets</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#parcour">Parcours</a></li>
+    </ul>
+</nav>
 
-    <main class="glass-zone" style="border-top: none; background: transparent;">
+<main class="glass-zone" style="border-top: none; background: transparent;">
 
-        <section class="section-container" id="about">
-            <div class="section-header">
-                <h2>À Propos de Moi</h2>
-                <p>Qui suis-je derrière le code ?</p>
+    <section class="section-container" id="about">
+        <div class="section-header">
+            <h2>À Propos de Moi</h2>
+            <p>Qui suis-je derrière le code ?</p>
+        </div>
+
+        <div class="about-wrapper">
+
+            <div class="about-text">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae unde veniam
+                    necessitatibus. Optio aliquid eos corporis quidem rem, autem quam est deleniti vero ab alias
+                    unde eligendi, ad sint veniam!
+
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores blanditiis quidem asperiores
+                    velit ratione atque. Deleniti, laboriosam pariatur quae animi iste asperiores delectus a rerum
+                    qui molestias accusantium iusto id.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, excepturi repellendus aliquam
+                    possimus, qui tempore alias sed commodi quisquam illum, voluptas blanditiis repellat
+                    exercitationem fuga facilis et ex? Quasi, necessitatibus?
+                </p>
             </div>
 
-            <div class="about-wrapper">
+            <div class="cv-container">
+                <div class="cv-card">
+                    <i class="fa-regular fa-file-pdf cv-icon"></i>
+                    <h3 class="cv-title">Mon Curriculum Vitae</h3>
+                    <span class="cv-subtitle">Version PDF </span>
 
-                <div class="about-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae unde veniam
-                        necessitatibus. Optio aliquid eos corporis quidem rem, autem quam est deleniti vero ab alias
-                        unde eligendi, ad sint veniam!
-
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores blanditiis quidem asperiores
-                        velit ratione atque. Deleniti, laboriosam pariatur quae animi iste asperiores delectus a rerum
-                        qui molestias accusantium iusto id.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, excepturi repellendus aliquam
-                        possimus, qui tempore alias sed commodi quisquam illum, voluptas blanditiis repellat
-                        exercitationem fuga facilis et ex? Quasi, necessitatibus?
-                    </p>
-                </div>
-
-                <div class="cv-container">
-                    <div class="cv-card">
-                        <i class="fa-regular fa-file-pdf cv-icon"></i>
-                        <h3 class="cv-title">Mon Curriculum Vitae</h3>
-                        <span class="cv-subtitle">Version PDF </span>
-
-                        <button class="btn-open-modal" onclick="openModal()">
-                            <i class="fa-solid fa-eye"></i> Voir le CV
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="section-container" id="skills">
-            <div class="section-header">
-                <h2>Mes Compétences</h2>
-
-            </div>
-
-            <div class="category-group">
-                <h3 class="category-title">Back-End & Logique</h3>
-                <div class="skills-grid">
-                    <div class="skill-card"> <i class="devicon-java-plain"></i> <span class="skill-name">Java</span>
-                    </div>
-                    <div class="skill-card"> <i class="devicon-python-plain"></i> <span class="skill-name">Python</span>
-                    </div>
-                    <div class="skill-card"> <i class="devicon-php-plain"></i> <span class="skill-name">PHP</span>
-                    </div>
-                    <div class="skill-card"> <i class="devicon-laravel-plain"></i> <span
-                            class="skill-name">Laravel</span> </div>
+                    <button class="btn-open-modal" onclick="openModal()">
+                        <i class="fa-solid fa-eye"></i> Voir le CV
+                    </button>
                 </div>
             </div>
 
-            <div class="category-group">
-                <h3 class="category-title">Front-End & Design</h3>
-                <div class="skills-grid">
-                    <div class="skill-card"> <i class="devicon-javascript-plain"></i> <span
-                            class="skill-name">JavaScript</span> </div>
-                    <div class="skill-card"> <i class="devicon-html5-plain"></i> <span class="skill-name">HTML5</span>
-                    </div>
-                    <div class="skill-card"> <i class="devicon-css3-plain"></i> <span class="skill-name">CSS3</span>
-                    </div>
+        </div>
+    </section>
+
+    <section class="section-container" id="skills">
+        <div class="section-header">
+            <h2>Mes Compétences</h2>
+
+        </div>
+
+        <div class="category-group">
+            <h3 class="category-title">Back-End & Logique</h3>
+            <div class="skills-grid">
+                <div class="skill-card"> <i class="devicon-java-plain"></i> <span class="skill-name">Java</span>
                 </div>
-            </div>
-
-            <div class="category-group">
-                <h3 class="category-title">Bases de Données & Outils</h3>
-                <div class="skills-grid">
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span>
-                    </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span>
-                    </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
-                    </div>
+                <div class="skill-card"> <i class="devicon-python-plain"></i> <span class="skill-name">Python</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- <section class="section-container" id="parcour">
-            <div class="section-header">
-                <h2>Mon Parcours</h2>
-                <p>Les étapes clés de mon évolution.</p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-date">2018 - 2020</span>
-                    <div class="point-marker"></div>
-                    <div class="timeline-content-wrapper">
-                        <div class="timeline-content">
-                            <h3>Débuts & Curiosité</h3>
-                            <p>Découverte de la programmation via Python. Création de bots Discord.</p>
-                        </div>
-                    </div>
+                <div class="skill-card"> <i class="devicon-php-plain"></i> <span class="skill-name">PHP</span>
                 </div>
-                <div class="timeline-item">
-                    <span class="timeline-date">2020 - 2023</span>
-                    <div class="point-marker"></div>
-                    <div class="timeline-content-wrapper">
-                        <div class="timeline-content">
-                            <h3>Baccalauréat Général</h3>
-                            <p>Spécialités Mathématiques et NSI. Obtention Mention Bien.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="timeline-date">Été 2023</span>
-                    <div class="point-marker"></div>
-                    <div class="timeline-content-wrapper">
-                        <div class="timeline-content">
-                            <h3>Stage Découverte</h3>
-                            <p>Immersion professionnelle et initiation au Full Stack.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="timeline-date">Aujourd'hui</span>
-                    <div class="point-marker"></div>
-                    <div class="timeline-content-wrapper">
-                        <div class="timeline-content">
-                            <h3>BUT Informatique</h3>
-                            <p>IUT de Lens. Spécialisation en réalisation d'applications.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-    </main>
-
-    <div id="cvModal" class="modal-overlay" onclick="closeModalOnOutside(event)">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Aperçu du CV</h3>
-                <button class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-
-            <iframe src="mon-cv.pdf" class="pdf-viewer"></iframe>
-
-            <div class="modal-footer">
-                <a href="mon-cv.pdf" download="CV_DAVI_Loick.pdf" class="btn-download-final">
-                    <i class="fa-solid fa-download"></i> Télécharger le fichier
-                </a>
+                <div class="skill-card"> <i class="devicon-laravel-plain"></i> <span
+                        class="skill-name">Laravel</span> </div>
             </div>
         </div>
+
+        <div class="category-group">
+            <h3 class="category-title">Front-End & Design</h3>
+            <div class="skills-grid">
+                <div class="skill-card"> <i class="devicon-javascript-plain"></i> <span
+                        class="skill-name">JavaScript</span> </div>
+                <div class="skill-card"> <i class="devicon-html5-plain"></i> <span class="skill-name">HTML5</span>
+                </div>
+                <div class="skill-card"> <i class="devicon-css3-plain"></i> <span class="skill-name">CSS3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-group">
+            <h3 class="category-title">Bases de Données & Outils</h3>
+            <div class="skills-grid">
+                <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span>
+                </div>
+                <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span>
+                </div>
+                <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div id="cvModal" class="modal-overlay" onclick="closeModalOnOutside(event)">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Aperçu du CV</h3>
+            <button class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <iframe src="mon-cv.pdf" class="pdf-viewer"></iframe>
+
+        <div class="modal-footer">
+            <a href="mon-cv.pdf" download="CV_DAVI_Loick.pdf" class="btn-download-final">
+                <i class="fa-solid fa-download"></i> Télécharger le fichier
+            </a>
+        </div>
     </div>
+</div>
 
-    <script>
-        // --- SCRIPT POUR LA MODALE ---
-        function openModal() {
-            const modal = document.getElementById('cvModal');
-            modal.style.display = 'flex'; // Nécessaire avant d'ajouter la classe active pour l'animation
-            setTimeout(() => {
-                modal.classList.add('active');
-            }, 10);
-            document.body.style.overflow = 'hidden'; // Empêche le scroll derrière
+<script>
+    // --- SCRIPT POUR LA MODALE ---
+    function openModal() {
+        const modal = document.getElementById('cvModal');
+        modal.style.display = 'flex'; // Nécessaire avant d'ajouter la classe active pour l'animation
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+        document.body.style.overflow = 'hidden'; // Empêche le scroll derrière
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('cvModal');
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300); // Attend la fin de l'animation
+        document.body.style.overflow = 'auto'; // Réactive le scroll
+    }
+
+    // Fermer si on clique sur le fond noir
+    function closeModalOnOutside(event) {
+        if (event.target.id === 'cvModal') {
+            closeModal();
         }
+    }
 
-        function closeModal() {
-            const modal = document.getElementById('cvModal');
-            modal.classList.remove('active');
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300); // Attend la fin de l'animation
-            document.body.style.overflow = 'auto'; // Réactive le scroll
-        }
-
-        // Fermer si on clique sur le fond noir
-        function closeModalOnOutside(event) {
-            if (event.target.id === 'cvModal') {
-                closeModal();
+    // --- SCRIPT EXISTANT POUR ETOILES ET NAVIGATION ---
+    function initStars() {
+        let sets = [['.stars', 700], ['.stars2', 200], ['.stars3', 100]];
+        sets.forEach(([sel, cnt]) => {
+            let shadow = [];
+            for (let i = 0; i < cnt; i++) {
+                shadow.push(`${Math.floor(Math.random() * window.innerWidth)}px ${Math.floor(Math.random() * 2000)}px #FFF`);
             }
-        }
-
-        // --- SCRIPT EXISTANT POUR ETOILES ET NAVIGATION ---
-        function initStars() {
-            let sets = [['.stars', 700], ['.stars2', 200], ['.stars3', 100]];
-            sets.forEach(([sel, cnt]) => {
-                let shadow = [];
-                for (let i = 0; i < cnt; i++) {
-                    shadow.push(`${Math.floor(Math.random() * window.innerWidth)}px ${Math.floor(Math.random() * 2000)}px #FFF`);
-                }
-                document.querySelector(sel).style.setProperty('--space-layer', shadow.join(', '));
-            });
-        }
-        initStars();
-        window.addEventListener('resize', initStars);
-
-        const navLinks = document.querySelectorAll('.nav-links a');
-        const marker = document.querySelector('.nav-marker');
-
-        function moveMarker(e) {
-            const link = e.target;
-            marker.style.opacity = '1';
-            marker.style.left = link.offsetLeft + 'px';
-            marker.style.width = link.offsetWidth + 'px';
-        }
-        function hideMarker() { marker.style.opacity = '0'; }
-        navLinks.forEach(link => link.addEventListener('mouseenter', moveMarker));
-        document.querySelector('.nav-links').addEventListener('mouseleave', hideMarker);
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const top = target.getBoundingClientRect().top + window.pageYOffset - 70;
-                    window.scrollTo({ top: top, behavior: 'smooth' });
-                }
-            });
+            document.querySelector(sel).style.setProperty('--space-layer', shadow.join(', '));
         });
-    </script>
+    }
+    initStars();
+    window.addEventListener('resize', initStars);
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const marker = document.querySelector('.nav-marker');
+
+    function moveMarker(e) {
+        const link = e.target;
+        marker.style.opacity = '1';
+        marker.style.left = link.offsetLeft + 'px';
+        marker.style.width = link.offsetWidth + 'px';
+    }
+    function hideMarker() { marker.style.opacity = '0'; }
+    navLinks.forEach(link => link.addEventListener('mouseenter', moveMarker));
+    document.querySelector('.nav-links').addEventListener('mouseleave', hideMarker);
+
+    /* --- NOUVEAU SCRIPT : SPOTLIGHT MOUSE TRACKING --- */
+    const navBar = document.getElementById('main-nav');
+    navBar.addEventListener('mousemove', (e) => {
+        const rect = navBar.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        navBar.style.setProperty('--mouse-x', `${x}px`);
+        navBar.style.setProperty('--mouse-y', `${y}px`);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const top = target.getBoundingClientRect().top + window.pageYOffset - 70;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
