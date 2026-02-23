@@ -1,0 +1,34 @@
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# =========================
+# Fichiers Système (OS)
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# =========================
+# Outils Web (Au cas où pour plus tard)
+# =========================
+# Si tu utilises NPM ou Yarn un jour
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Si tu utilises un compilateur CSS (comme Sass) ou un bundler
+.sass-cache/
+dist/
+build/
