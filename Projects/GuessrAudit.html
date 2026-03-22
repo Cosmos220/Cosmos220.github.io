@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos | Projet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="stars-container">
+
+</div>
+
+<nav id="main-nav">
+    <div class="logo">COSMOS</div>
+    <ul class="nav-links">
+        <div class="nav-marker"></div>
+        <li><a href="../index.html#home">Accueil</a></li>
+        <li><a href="../index.html#about">À propos</a></li>
+        <li><a href="../index.html#skills">Compétences</a></li>
+        <li><a href="../index.html#projects">Projets</a></li>
+        <li><a href="../Contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main class="glass-zone">
+    <div class="project-container">
+
+        <a href="../index.html#projects" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Retour au portfolio
+        </a>
+
+        <h1 class="project-title">GuessrAudit</h1>
+
+        <div class="hero-banner">
+           <img class="guessraudit" src="/assets/img/Projects/GuessrAudit/GuessrAudit.png">
+        </div>
+
+        <div class="tags-wrapper">
+            <span class="tags-label">Technos utilisées :</span>
+            <span class="tag">Reverse engineering</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">API </span>
+           
+
+        </div>
+
+      
+
+
+        <section class="content-section">
+            <h2>Description</h2>
+                <p>GuessrAudit est une extension de navigateur qui intercepte et analyse le trafic réseau du jeu web OpenGuessr. Grâce à un travail de reverse engineering sur les communications entre le client et l'API, elle permet de contourner les mécaniques du jeu : révélation des coordonnées GPS cachées et modification directe des statistiques du joueur (Expérience, Badges, Pins). Cette solution met en lumière les risques liés au manque de validation stricte côté serveur dans les applications web modernes.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Fonctionnalités</h2>
+            <ul class="content-list">
+                <li>Radar en temps réel : Interception des requêtes de métadonnées pour extraire la position GPS exacte et l'afficher sur une carte interactive.Capture de session dynamique : Vol "à la volée" du Token d'authentification (JWT) et de l'ID joueur via la technique du Monkey Patching sur les requêtes fetch et XHR.</li>              
+                <li>Exploitation de l'API (Broken Access Control) : Envoi de requêtes HTTP forgées pour injecter de l'XP (exploitation de la limite de validation à 9998/requête) et forcer le déblocage de cosmétiques.</li>
+                <li>Intégration transparente : Injection d'une interface utilisateur (UI) de contrôle directement dans le DOM (la page existante) du jeu.</li>
+            </ul>
+        </section>
+
+
+
+
+
+    </div>
+</main>
+
+<script src="../assets/js/main.js"></script>
+</body>
+
+</html>
