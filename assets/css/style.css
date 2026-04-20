@@ -280,7 +280,8 @@ nav a:hover, nav a.active { color: white; }
     justify-content: center;
 }
 
-.image-wrapper {
+/* Modification pour l'animation SVG (remplace .image-wrapper) */
+.svg-wrapper {
     width: 450px;
     height: 550px;
     border-radius: 20px;
@@ -288,20 +289,87 @@ nav a:hover, nav a.active { color: white; }
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     background: rgba(255, 255, 255, 0.05);
-    padding: 10px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    backdrop-filter: blur(10px);
 }
 
-.image-wrapper img {
+/* --- ILLUSTRATION : PLANÈTE SIMPLE --- */
+.simple-visual-wrapper {
+    width: 450px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+}
+
+.simple-planet-svg {
+    width: 100%;
+    max-width: 320px;
+    /* Effet de lévitation doux */
+    animation: floatSimple 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatSimple {
+    0% { transform: translateY(-15px); }
+    100% { transform: translateY(15px); }
+}
+/* --- NOUVELLE ILLUSTRATION : PULSAR (SANS CONTOUR) --- */
+.pulsar-wrapper {
+    width: 450px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* AUCUN FOND, AUCUN CONTOUR */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.pulsar-svg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: transform 0.5s ease;
+    max-width: 400px;
+    /* Effet de lévitation global */
+    animation: floatPulsar 6s ease-in-out infinite alternate;
 }
 
-.image-wrapper:hover img {
+/* Centre de rotation pour tous les anneaux */
+.pulsar-svg .ring, .pulsar-svg .particle-ring {
+    transform-origin: 100px 100px;
+}
+
+/* Vitesses de rotation différentes pour un effet hypnotique */
+.ring1 { animation: spinRing 12s linear infinite; }
+.ring2 { animation: spinRing 20s linear infinite reverse; }
+.ring3 { animation: spinRing 35s linear infinite; }
+.particle-ring { animation: spinRing 5s linear infinite reverse; }
+
+/* Animations Keyframes */
+@keyframes spinRing {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes floatPulsar {
+    0% { transform: translateY(-15px); }
+    100% { transform: translateY(15px); }
+}
+
+
+.svg-wrapper:hover .cosmos-svg {
     transform: scale(1.05);
 }
+
+/* Animations de l'atome / système solaire */
+@keyframes spin1 { 100% { transform: rotate(360deg); } }
+@keyframes spin2 { 100% { transform: rotate(-360deg); } }
+@keyframes spin3 { 100% { transform: rotate(360deg); } }
 
 .scroll-indicator {
     position: absolute;
