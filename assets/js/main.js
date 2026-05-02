@@ -6,7 +6,7 @@ function openModal() {
         setTimeout(() => {
             modal.classList.add('active');
         }, 10);
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.overflow = 'hidden';
     }
 }
 
@@ -17,7 +17,7 @@ function closeModal() {
         setTimeout(() => {
             modal.style.display = 'none';
         }, 300); r
-        document.body.style.overflow = 'auto'; 
+        document.body.style.overflow = 'auto';
     }
 }
 
@@ -28,7 +28,7 @@ function closeModalOnOutside(event) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. Initialisation des étoiles
     function initStars() {
         let sets = [['.stars', 700], ['.stars2', 200], ['.stars3', 100]];
@@ -49,12 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Navigation : Effet Spotlight de la souris
     const navBar = document.getElementById('main-nav');
     if (navBar) {
+        let ticking = false;
         navBar.addEventListener('mousemove', (e) => {
-            const rect = navBar.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            navBar.style.setProperty('--mouse-x', `${x}px`);
-            navBar.style.setProperty('--mouse-y', `${y}px`);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const rect = navBar.getBoundingClientRect();
+                    navBar.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                    navBar.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
     }
 
@@ -102,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const currentId = entry.target.getAttribute('id');
-                
+
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${currentId}`) {
@@ -138,14 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealOptions = {
         root: null,
         rootMargin: '0px 0px -100px 0px',
-        threshold: 0.15 
+        threshold: 0.15
     };
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target); 
+                observer.unobserve(entry.target);
             }
         });
     }, revealOptions);

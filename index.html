@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmos | Portfolio de DAVI Loïck</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="google-site-verification" content="Dh7P1Ml7oX9XoDdgQTJww-3KYXYWVyI3N4spNAs0tEU" />
@@ -14,344 +16,392 @@
 
 <body class="home-page">
 
-<div class="stars-container">
-    <div id="stars" class="stars"></div>
-    <div id="stars2" class="stars2"></div>
-    <div id="stars3" class="stars3"></div>
-</div>
-
-<nav id="main-nav">
-    <div class="logo">COSMOS</div>
-    <ul class="nav-links">
-        <div class="nav-marker"></div>
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="Projets.html">Projets</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<section class="hero" id="home">
-    <div class="hero-content">
-        <div class="hero-text reveal">
-            <p class="greeting">Bonjour, je suis</p>
-            <h1 class="main-title">DAVI Loïck</h1>
-            <h2 class="subtitle">Futur développeur </h2>
-            <p class="hero-desc">
-                Étudiant en informatique a l'IUT de Lens je recherche actuellement un stage a partir d'avril 2026</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-primary">Voir mes projets</a>
-                <a href="#about" class="btn-secondary">En savoir plus</a>
-            </div>
-        </div>
-        
-       <div class="hero-visual reveal" style="transition-delay: 0.2s;">
-            <div class="simple-visual-wrapper">
-                <svg class="simple-planet-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <filter id="simpleGlow" x="-20%" y="-20%" width="140%" height="140%">
-                            <feGaussianBlur stdDeviation="6" result="blur" />
-                            <feMerge>
-                                <feMergeNode in="blur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                        <linearGradient id="planetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="100%" stop-color="#3B82F6" />
-                        </linearGradient>
-                    </defs>
-                    
-                    <ellipse cx="100" cy="100" rx="80" ry="20" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" transform="rotate(-15 100 100)" />
-                    
-                    <circle cx="100" cy="100" r="35" fill="url(#planetGrad)" filter="url(#simpleGlow)" />
-                    
-                    <circle cx="40" cy="60" r="2" fill="#ffffff" opacity="0.8" />
-                    <circle cx="160" cy="140" r="1.5" fill="#ffffff" opacity="0.5" />
-                    <circle cx="170" cy="60" r="1" fill="#ffffff" opacity="0.9" />
-                </svg>
-            </div>
-        </div>
+    <div class="stars-container">
+        <div id="stars" class="stars"></div>
+        <div id="stars2" class="stars2"></div>
+        <div id="stars3" class="stars3"></div>
     </div>
 
-    <a href="#about" class="scroll-indicator reveal" style="transition-delay: 0.4s;">
-        <span>Défiler</span>
-        <i class="fa-solid fa-chevron-down arrow-down"></i>
-    </a>
-</section>
+    <nav id="main-nav">
+        <div class="logo">COSMOS</div>
+        <ul class="nav-links">
+            <div class="nav-marker"></div>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="Projets.html">Projets</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<main class="glass-zone" style="border-top: none; background: transparent;">
-
-    <section class="section-container reveal" id="about">
-        <div class="section-header">
-            <h2>À Propos de Moi</h2>
-            <p>Qui suis-je derrière le code ?</p>
-        </div>
-
-        <div class="about-wrapper">
-            <div class="about-text">
-                <h3>Loïck Davi Futur Développeur d'Applications</h3>
-                <p>
-                   Je m’appelle Loïck Davi et je suis actuellement étudiant à l’IUT de Lens en informatique, avec une spécialisation en développement d’applications. Passionné par l’univers du code depuis mes débuts, j’ai choisi ce cursus pour transformer ma curiosité en une expertise technique solide. Mon objectif est simple : concevoir des solutions numériques qui soient à la fois performantes, intuitives et utiles aux utilisateurs.
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text reveal">
+                <p class="greeting">Bonjour, je suis</p>
+                <h1 class="main-title">DAVI Loïck</h1>
+                <h2 class="subtitle">Futur développeur</h2>
+                <p class="hero-desc">
+                    Étudiant en informatique à l'IUT de Lens je recherche actuellement un stage à partir d'avril 2026
                 </p>
-                <p>
-                    Aujourd'hui, je souhaite mettre mon dynamisme et ma capacité d'apprentissage au service d'une entreprise innovante. Je suis activement à la recherche d'une alternance débutant en avril 2026. Rigoureux, autonome et doté d'un bon esprit d'équipe, je suis prêt à m’investir pleinement dans vos projets pour continuer à progresser tout en apportant une réelle valeur ajoutée à votre équipe de développement.
-                </p>
-            </div>
-
-            <div class="cv-container">
-                <div class="cv-card">
-                    <i class="fa-regular fa-file-pdf cv-icon"></i>
-                    <h3 class="cv-title">Mon Curriculum Vitae</h3>
-                    <span class="cv-subtitle">Version PDF</span>
-
-                    <button class="btn-open-modal" onclick="openModal()">
-                        <i class="fa-solid fa-eye"></i> Voir le CV
-                    </button>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">Voir mes projets</a>
+                    <a href="#about" class="btn-secondary">En savoir plus</a>
                 </div>
             </div>
         </div>
+        <a href="#about" class="scroll-indicator reveal" style="transition-delay: 0.4s;">
+            <span>Défiler</span>
+            <i class="fa-solid fa-chevron-down arrow-down"></i>
+        </a>
     </section>
-    
+    <main class="glass-zone" style="border-top: none; background: transparent;">
 
-    
-    <section class="section-container reveal" id="projects">
-        <div class="section-header">
-            <h2>Mes Projets</h2>
-            <p>Une sélection de mes travaux académiques et personnels.</p>
-        </div>
-
-        <div class="projects-grid">
-            <div class="project-card">
-                <a href="Projects/Larsen.html" class="card-full-link"></a>
-                <div class="project-visual">
-                    <img class="larsen-img" src="assets/img/Projects/Larsen/Larsen_2.png" alt="Larsen - Blog de musique">
-                </div>
-                <div class="project-content">
-                    <h3>Larsen</h3>
-                    <p>Blog de musique de type grunge en collaboration avec le département MMI.</p>
-                    <div class="project-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">MYSQL</span>
-                        <span class="tag">Tailwind CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cosmos220/Larsen-Marathon-Web" target="_blank" class="btn-project btn-code" style="z-index: 20; position: relative;"><i class="devicon-github-original"></i> Code</a>
-                        <a href="Projects/Larsen.html" class="btn-project btn-demo" style="z-index: 20; position: relative;"><i class="fa-solid fa-eye"></i> Voir</a>
-                    </div>
-                </div>
+        <section class="section-container reveal" id="about">
+            <div class="section-header">
+                <h2>À Propos de Moi</h2>
+                <p>Qui suis-je derrière le code ?</p>
             </div>
 
-            <div class="project-card">
-                <a href="Projects/Bomberman.html" class="card-full-link"></a>
-                <div class="project-visual">
-                    <img class="bomberman-img" src="assets/img/Projects/Bomberman/Bomberman_1.png" alt="Bomberman - Jeu en JavaFX">
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <h3>Loïck Davi Futur Développeur d'Applications</h3>
+                    <p>
+                        Je m’appelle Loïck Davi et je suis actuellement étudiant à l’IUT de Lens en informatique, avec
+                        une spécialisation en développement d’applications. Passionné par l’univers du code depuis mes
+                        débuts, j’ai choisi ce cursus pour transformer ma curiosité en une expertise technique solide.
+                        Mon objectif est simple : concevoir des solutions numériques qui soient à la fois performantes,
+                        intuitives et utiles aux utilisateurs.
+                    </p>
+                    <p>
+                        Aujourd'hui, je souhaite mettre mon dynamisme et ma capacité d'apprentissage au service d'une
+                        entreprise innovante. Je suis activement à la recherche d'une alternance débutant en avril 2026.
+                        Rigoureux, autonome et doté d'un bon esprit d'équipe, je suis prêt à m’investir pleinement dans
+                        vos projets pour continuer à progresser tout en apportant une réelle valeur ajoutée à votre
+                        équipe de développement.
+                    </p>
                 </div>
-                <div class="project-content">
-                    <h3>Bomberman</h3>
-                    <p>Le jeux Bomberman réalisé en javafx</p>
-                    <div class="project-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">JavaFX</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cosmos220/JavaFX-Jeux-Bomberman" target="_blank" class="btn-project btn-code" style="z-index: 20; position: relative;"><i class="devicon-github-original"></i> Code</a>
-                        <a href="Projects/Bomberman.html" class="btn-project btn-demo" style="z-index: 20; position: relative;"><i class="fa-solid fa-eye"></i> Voir</a>
+
+                <div class="cv-container">
+                    <div class="cv-card">
+                        <i class="fa-regular fa-file-pdf cv-icon"></i>
+                        <h3 class="cv-title">Mon Curriculum Vitae</h3>
+                        <span class="cv-subtitle">Version PDF</span>
+
+                        <button class="btn-open-modal" onclick="openModal()">
+                            <i class="fa-solid fa-eye"></i> Voir le CV
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="project-card">
-                <a href="Projects/Polaris.html" class="card-full-link"></a>
-                <div class="project-visual">
-                    <img class="todo-list" src="assets/img/Projects/Polaris/Polaris.png" alt="Todo-List PWA">
-                </div>
-                <div class="project-content">
-                    <h3>Polaris</h3>
-                    <p>Une application Todo list pwa pour gérer mes taches au quotidien.</p>
-                    <div class="project-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">API REST</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">flask</span>
+        </section>
+
+
+
+        <section class="section-container reveal" id="projects">
+            <div class="section-header">
+                <h2>Mes Projets</h2>
+                <p>Une sélection de mes travaux académiques et personnels.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a href="Projects/Larsen.html" class="card-full-link"></a>
+                    <div class="project-visual">
+                        <img class="larsen-img" src="assets/img/Projects/Larsen/Larsen_2.png"
+                            alt="Larsen - Blog de musique">
                     </div>
-                    <div class="project-links">
-                        <a href="Projects/Polaris.html" class="btn-project btn-demo" style="z-index: 20; position: relative;"><i class="fa-solid fa-eye"></i> Voir</a>
+                    <div class="project-content">
+                        <h3>Larsen</h3>
+                        <p>Blog de musique de type grunge en collaboration avec le département MMI.</p>
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MYSQL</span>
+                            <span class="tag">Tailwind CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Cosmos220/Larsen-Marathon-Web" target="_blank"
+                                class="btn-project btn-code" style="z-index: 20; position: relative;"><i
+                                    class="devicon-github-original"></i> Code</a>
+                            <a href="Projects/Larsen.html" class="btn-project btn-demo"
+                                style="z-index: 20; position: relative;"><i class="fa-solid fa-eye"></i> Voir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <a href="Projects/Bomberman.html" class="card-full-link"></a>
+                    <div class="project-visual">
+                        <img class="bomberman-img" src="assets/img/Projects/Bomberman/Bomberman_1.png"
+                            alt="Bomberman - Jeu en JavaFX">
+                    </div>
+                    <div class="project-content">
+                        <h3>Bomberman</h3>
+                        <p>Le jeux Bomberman réalisé en javafx</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaFX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Cosmos220/JavaFX-Jeux-Bomberman" target="_blank"
+                                class="btn-project btn-code" style="z-index: 20; position: relative;"><i
+                                    class="devicon-github-original"></i> Code</a>
+                            <a href="Projects/Bomberman.html" class="btn-project btn-demo"
+                                style="z-index: 20; position: relative;"><i class="fa-solid fa-eye"></i> Voir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <a href="Projects/Polaris.html" class="card-full-link"></a>
+                    <div class="project-visual">
+                        <img class="todo-list" src="assets/img/Projects/Polaris/Polaris.png" alt="Todo-List PWA">
+                    </div>
+                    <div class="project-content">
+                        <h3>Polaris</h3>
+                        <p>Une application Todo list pwa pour gérer mes taches au quotidien.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">API REST</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="Projects/Polaris.html" class="btn-project btn-demo"
+                                style="z-index: 20; position: relative;"><i class="fa-solid fa-eye"></i> Voir</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="Projets.html" class="btn-primary" style="padding: 16px 40px; font-size: 1.1rem;">
+                    Explorer tous mes projets <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="section-container reveal" id="skills">
+            <div class="section-header">
+                <h2>Mes Compétences</h2>
+            </div>
+
+            <div class="marquee-wrapper">
+                <div class="marquee-container">
+                    <div class="marquee-track track-left">
+                        <div class="skill-card"> <i class="devicon-java-plain"></i> <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-python-plain"></i> <span
+                                class="skill-name">Python</span> </div>
+                        <div class="skill-card"> <i class="devicon-php-plain"></i> <span class="skill-name">PHP</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-laravel-plain"></i> <span
+                                class="skill-name">Laravel</span> </div>
+                        <div class="skill-card"> <i class="devicon-javascript-plain"></i> <span
+                                class="skill-name">JavaScript</span> </div>
+                        <div class="skill-card"> <i class="devicon-typescript-plain"></i> <span
+                                class="skill-name">TypeScript</span> </div>
+                        <div class="skill-card"> <i class="devicon-vuejs-plain"></i> <span
+                                class="skill-name">Vue.js</span> </div>
+                        <div class="skill-card"> <i class="devicon-angularjs-plain"></i> <span
+                                class="skill-name">Angular</span> </div>
+                        <div class="skill-card"> <i class="devicon-html5-plain"></i> <span
+                                class="skill-name">HTML5</span> </div>
+                        <div class="skill-card"> <i class="devicon-css3-plain"></i> <span class="skill-name">CSS3</span>
+                        </div>
+
+                        <div class="skill-card"> <i class="devicon-java-plain"></i> <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-python-plain"></i> <span
+                                class="skill-name">Python</span> </div>
+                        <div class="skill-card"> <i class="devicon-php-plain"></i> <span class="skill-name">PHP</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-laravel-plain"></i> <span
+                                class="skill-name">Laravel</span> </div>
+                        <div class="skill-card"> <i class="devicon-javascript-plain"></i> <span
+                                class="skill-name">JavaScript</span> </div>
+                        <div class="skill-card"> <i class="devicon-typescript-plain"></i> <span
+                                class="skill-name">TypeScript</span> </div>
+                        <div class="skill-card"> <i class="devicon-vuejs-plain"></i> <span
+                                class="skill-name">Vue.js</span> </div>
+                        <div class="skill-card"> <i class="devicon-angularjs-plain"></i> <span
+                                class="skill-name">Angular</span> </div>
+                        <div class="skill-card"> <i class="devicon-html5-plain"></i> <span
+                                class="skill-name">HTML5</span> </div>
+                        <div class="skill-card"> <i class="devicon-css3-plain"></i> <span class="skill-name">CSS3</span>
+                        </div>
+
+                        <div class="skill-card"> <i class="devicon-java-plain"></i> <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-python-plain"></i> <span
+                                class="skill-name">Python</span> </div>
+                        <div class="skill-card"> <i class="devicon-php-plain"></i> <span class="skill-name">PHP</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-laravel-plain"></i> <span
+                                class="skill-name">Laravel</span> </div>
+                        <div class="skill-card"> <i class="devicon-javascript-plain"></i> <span
+                                class="skill-name">JavaScript</span> </div>
+                        <div class="skill-card"> <i class="devicon-typescript-plain"></i> <span
+                                class="skill-name">TypeScript</span> </div>
+                        <div class="skill-card"> <i class="devicon-vuejs-plain"></i> <span
+                                class="skill-name">Vue.js</span> </div>
+                        <div class="skill-card"> <i class="devicon-angularjs-plain"></i> <span
+                                class="skill-name">Angular</span> </div>
+                        <div class="skill-card"> <i class="devicon-html5-plain"></i> <span
+                                class="skill-name">HTML5</span> </div>
+                        <div class="skill-card"> <i class="devicon-css3-plain"></i> <span class="skill-name">CSS3</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-        </div>
-        
-        
-        <div style="text-align: center; margin-top: 60px;">
-            <a href="Projets.html" class="btn-primary" style="padding: 16px 40px; font-size: 1.1rem;">
-                Explorer tous mes projets <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
-            </a>
-        </div>
-    </section>
 
-    <section class="section-container reveal" id="skills">
-        <div class="section-header">
-            <h2>Mes Compétences</h2>
-        </div>
-
-       <div class="marquee-wrapper">
-            <div class="marquee-container">
-                <div class="marquee-track track-left">
-                    <div class="skill-card"> <i class="devicon-java-plain"></i> <span class="skill-name">Java</span> </div>
-                    <div class="skill-card"> <i class="devicon-python-plain"></i> <span class="skill-name">Python</span> </div>
-                    <div class="skill-card"> <i class="devicon-php-plain"></i> <span class="skill-name">PHP</span> </div>
-                    <div class="skill-card"> <i class="devicon-laravel-plain"></i> <span class="skill-name">Laravel</span> </div>
-                    <div class="skill-card"> <i class="devicon-javascript-plain"></i> <span class="skill-name">JavaScript</span> </div>
-                    <div class="skill-card"> <i class="devicon-typescript-plain"></i> <span class="skill-name">TypeScript</span> </div>
-                    <div class="skill-card"> <i class="devicon-vuejs-plain"></i> <span class="skill-name">Vue.js</span> </div>
-                    <div class="skill-card"> <i class="devicon-angularjs-plain"></i> <span class="skill-name">Angular</span> </div>
-                    <div class="skill-card"> <i class="devicon-html5-plain"></i> <span class="skill-name">HTML5</span> </div>
-                    <div class="skill-card"> <i class="devicon-css3-plain"></i> <span class="skill-name">CSS3</span> </div>
-                    
-                    <div class="skill-card"> <i class="devicon-java-plain"></i> <span class="skill-name">Java</span> </div>
-                    <div class="skill-card"> <i class="devicon-python-plain"></i> <span class="skill-name">Python</span> </div>
-                    <div class="skill-card"> <i class="devicon-php-plain"></i> <span class="skill-name">PHP</span> </div>
-                    <div class="skill-card"> <i class="devicon-laravel-plain"></i> <span class="skill-name">Laravel</span> </div>
-                    <div class="skill-card"> <i class="devicon-javascript-plain"></i> <span class="skill-name">JavaScript</span> </div>
-                    <div class="skill-card"> <i class="devicon-typescript-plain"></i> <span class="skill-name">TypeScript</span> </div>
-                    <div class="skill-card"> <i class="devicon-vuejs-plain"></i> <span class="skill-name">Vue.js</span> </div>
-                    <div class="skill-card"> <i class="devicon-angularjs-plain"></i> <span class="skill-name">Angular</span> </div>
-                    <div class="skill-card"> <i class="devicon-html5-plain"></i> <span class="skill-name">HTML5</span> </div>
-                    <div class="skill-card"> <i class="devicon-css3-plain"></i> <span class="skill-name">CSS3</span> </div>
-
-                    <div class="skill-card"> <i class="devicon-java-plain"></i> <span class="skill-name">Java</span> </div>
-                    <div class="skill-card"> <i class="devicon-python-plain"></i> <span class="skill-name">Python</span> </div>
-                    <div class="skill-card"> <i class="devicon-php-plain"></i> <span class="skill-name">PHP</span> </div>
-                    <div class="skill-card"> <i class="devicon-laravel-plain"></i> <span class="skill-name">Laravel</span> </div>
-                    <div class="skill-card"> <i class="devicon-javascript-plain"></i> <span class="skill-name">JavaScript</span> </div>
-                    <div class="skill-card"> <i class="devicon-typescript-plain"></i> <span class="skill-name">TypeScript</span> </div>
-                    <div class="skill-card"> <i class="devicon-vuejs-plain"></i> <span class="skill-name">Vue.js</span> </div>
-                    <div class="skill-card"> <i class="devicon-angularjs-plain"></i> <span class="skill-name">Angular</span> </div>
-                    <div class="skill-card"> <i class="devicon-html5-plain"></i> <span class="skill-name">HTML5</span> </div>
-                    <div class="skill-card"> <i class="devicon-css3-plain"></i> <span class="skill-name">CSS3</span> </div>
+            <div class="marquee-wrapper">
+                <div class="marquee-container">
+                    <div class="marquee-track track-right" style="animation-duration: 30s;">
+                        <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span
+                                class="skill-name">MySQL</span> </div>
+                        <div class="skill-card"> <i class="devicon-podman-plain"></i> <span
+                                class="skill-name">Podman</span> </div>
+                        <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span
+                                class="skill-name">MySQL</span> </div>
+                        <div class="skill-card"> <i class="devicon-podman-plain"></i> <span
+                                class="skill-name">Podman</span> </div>
+                        <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span
+                                class="skill-name">MySQL</span> </div>
+                        <div class="skill-card"> <i class="devicon-podman-plain"></i> <span
+                                class="skill-name">Podman</span> </div>
+                        <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span
+                                class="skill-name">MySQL</span> </div>
+                        <div class="skill-card"> <i class="devicon-podman-plain"></i> <span
+                                class="skill-name">Podman</span> </div>
+                        <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span
+                                class="skill-name">MySQL</span> </div>
+                        <div class="skill-card"> <i class="devicon-podman-plain"></i> <span
+                                class="skill-name">Podman</span> </div>
+                        <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span
+                                class="skill-name">MySQL</span> </div>
+                        <div class="skill-card"> <i class="devicon-podman-plain"></i> <span
+                                class="skill-name">Podman</span> </div>
+                        <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span
+                                class="skill-name">MySQL</span> </div>
+                        <div class="skill-card"> <i class="devicon-podman-plain"></i> <span
+                                class="skill-name">Podman</span> </div>
+                        <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span
+                                class="skill-name">MySQL</span> </div>
+                        <div class="skill-card"> <i class="devicon-podman-plain"></i> <span
+                                class="skill-name">Podman</span> </div>
+                        <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="marquee-wrapper">
-            <div class="marquee-container">
-                <div class="marquee-track track-right" style="animation-duration: 30s;">
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span> </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span> </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span> </div>
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span> </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span> </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span> </div>
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span> </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span> </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span> </div>
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span> </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span> </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span> </div>
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span> </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span> </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span> </div>
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span> </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span> </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span> </div>
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span> </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span> </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span> </div>
-                    <div class="skill-card"> <i class="devicon-mysql-plain"></i> <span class="skill-name">MySQL</span> </div>
-                    <div class="skill-card"> <i class="devicon-podman-plain"></i> <span class="skill-name">Podman</span> </div>
-                    <div class="skill-card"> <i class="devicon-git-plain"></i> <span class="skill-name">Git</span> </div>
+        <section class="section-container reveal" id="journey">
+            <div class="section-header">
+                <h2>Mon Parcours</h2>
+
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - Présent</span>
+                        <h3>BUT Informatique</h3>
+                        <h4>IUT de Lens</h4>
+                        <p>Développement d'applications, bases de données, gestion de projets et algorithmique avancée.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="section-container reveal" id="journey">
-        <div class="section-header">
-            <h2>Mon Parcours</h2>
-            
-        </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - 2024</span>
+                        <h3>Baccalauréat Téchnologique</h3>
+                        <h4>Lycée Carnot (Bruay la buissiere)</h4>
+                        <p>STI2D Spécialité SIN (systèmes d'information et numérique)</p>
 
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2024 - Présent</span>
-                    <h3>BUT Informatique</h3>
-                    <h4>IUT de Lens</h4>
-                    <p>Développement d'applications, bases de données, gestion de projets et algorithmique avancée.</p>
+
+                    </div>
                 </div>
+
+
             </div>
+        </section>
 
-            <div class="timeline-item right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2023 - 2024</span>
-                    <h3>Baccalauréat Téchnologique</h3>
-                    <h4>Lycée Carnot (Bruay la buissiere)</h4>
-                    <p>STI2D Spécialité SIN (systèmes d'information et numérique)</p>
-                   
 
-                </div>
+
+    </main>
+    <div id="cvModal" class="modal-overlay" onclick="closeModalOnOutside(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Aperçu du CV</h3>
+                <button class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
             </div>
-
-            
+            <iframe src="./assets/docs/CV_Davi_Loïck_Développeur_dapplications.pdf" class="pdf-viewer"></iframe>
+            <div class="modal-footer">
+                <a href="./assets/docs/CV_Davi_Loïck_Développeur_dapplications.pdf" download="CV_DAVI_Loick.pdf"
+                    class="btn-download-final">
+                    <i class="fa-solid fa-download"></i> Télécharger le fichier
+                </a>
             </div>
-    </section>
-
-
-    
-</main>
-<div id="cvModal" class="modal-overlay" onclick="closeModalOnOutside(event)">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>Aperçu du CV</h3>
-            <button class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <iframe src="./assets/docs/CV_Davi_Loïck_Développeur_dapplications.pdf" class="pdf-viewer"></iframe>
-        <div class="modal-footer">
-            <a href="./assets/docs/CV_Davi_Loïck_Développeur_dapplications.pdf" download="CV_DAVI_Loick.pdf" class="btn-download-final">
-                <i class="fa-solid fa-download"></i> Télécharger le fichier
-            </a>
         </div>
     </div>
-</div>
 
-<footer>
-    <div class="footer-top">
-        <div class="footer-col">
-            <h3 class="footer-name">DAVI Loïck</h3>
-            <p class="footer-desc">Étudiant en Informatique | Passionné par le développement et les nouvelles technologies  </p>
-        </div>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+                <h3 class="footer-name">DAVI Loïck</h3>
+                <p class="footer-desc">Étudiant en Informatique | Passionné par le développement et les nouvelles
+                    technologies </p>
+            </div>
 
-        <div class="footer-col">
-            <h4 class="footer-title">Navigation</h4>
-            <ul class="footer-nav">
-                <li><a href="#home">Accueil</a></li>
-                 <li><a href="#about">À propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="Projets.html">Mes Projets</a></li>
-                <li><a href="Contact.html">Me Contacter</a></li>
+            <div class="footer-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-nav">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="Projets.html">Mes Projets</a></li>
+                    <li><a href="Contact.html">Me Contacter</a></li>
 
-               
-            </ul>
-        </div>
 
-        <div class="footer-col">
-            <h4 class="footer-title">Suivez-moi</h4>
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/loïck-davi" target="_blank" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
-                <a href="https://github.com/Cosmos220" target="_blank" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Suivez-moi</h4>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/loïck-davi" target="_blank" aria-label="LinkedIn"><i
+                            class="devicon-linkedin-plain"></i></a>
+                    <a href="https://github.com/Cosmos220" target="_blank" aria-label="GitHub"><i
+                            class="devicon-github-original"></i></a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p id="footer-text" class="footer-text"></p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p id="footer-text" class="footer-text"></p>
+        </div>
+    </footer>
 
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
